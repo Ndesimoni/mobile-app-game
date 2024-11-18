@@ -6,6 +6,7 @@ import Tittle from "../components/ui/Tittle";
 import Card from "../components/ui/Card";
 import Instruction from "../components/ui/Instruction";
 import ButtonContainer from "../components/ui/ButtonContainer";
+import Test from "../playGround/Test";
 
 const StartGameScreen = ({ handelUsersNumber }) => {
   const [inputValue, setInputValue] = useState("");
@@ -56,6 +57,7 @@ const StartGameScreen = ({ handelUsersNumber }) => {
           </View>
         </ButtonContainer>
       </Card>
+      <Test />
     </View>
   );
 };

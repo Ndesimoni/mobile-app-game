@@ -28,7 +28,7 @@ const GameScreen = ({ usersInputValue, handleGameOver }) => {
   const [guessRounds, setGuessRounds] = useState([initialValue]);
 
   useEffect(() => {
-    if (usersInputValue === generatedNumber) {
+    if (+usersInputValue === generatedNumber) {
       handleGameOver(guessRounds.length);
     }
   }, [usersInputValue, generatedNumber, handleGameOver]);
@@ -91,7 +91,7 @@ const GameScreen = ({ usersInputValue, handleGameOver }) => {
           </ButtonContainer>
         </Card>
       </View>
-      <View style={{ flex: 1, padding: 24.5 }}>
+      <View style={{ flex: 1, padding: 25 }}>
         <FlatList
           data={guessRounds}
           renderItem={(dataItems) => (
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     padding: 5,
   },
+
   buttonHold: {
     flex: 1,
   },
